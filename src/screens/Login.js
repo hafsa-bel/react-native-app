@@ -17,7 +17,7 @@ export default class Login extends React.Component{
                      fontFamily:"SemiBold",
                      alignSelf:"center",
                  }}
-                >Save the world</Text>
+                >Welcome</Text>
 
                 <Text
                 style={{
@@ -28,7 +28,7 @@ export default class Login extends React.Component{
                     opacity:0.4
                 }}
                 >
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                    hey how are you hksjhjksl
                 </Text>
 
                 <View style={{
