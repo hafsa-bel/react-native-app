@@ -3,7 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import AppNavigator from './src/navigations/Navigator'
 import * as Font from 'expo-font';
-import {AppLoading} from 'expo'
+import AppLoading from 'expo-app-loading'
 import { isRequired } from 'react-native/Libraries/DeprecatedPropTypes/DeprecatedColorPropType';
 
 export default class App extends React.Component {
@@ -13,16 +13,16 @@ export default class App extends React.Component {
 
   async componentDidMount(){
     await Font.loadAsync({
-      'SemiBold' : require('./src/fonts/Montserrat-SemiBold.otf'),
-      'Medium' : require('./src/fonts/Montserrat-Medium.otf'),
-      'Regular' : require('./src/fonts/Montserrat-Regular.otf')
+      'SemiBold' : require('./src/fonts/MontserratAlternates-SemiBold.otf'),
+      'Medium' : require('./src/fonts/MontserratAlternates-Medium.otf'),
+      'Regular' : require('./src/fonts/MontserratAlternates-Regular.otf')
     });
     this.setState({isFontLoaded:true})
   }
 
   render(){
     return (
-      (this.state.isFontLoaded === true) ? (<AppNavigator/>):(AppLoading)
+      (this.state.isFontLoaded === true) ? (<AppNavigator/>):(<AppLoading/>)
       
     );
   }
